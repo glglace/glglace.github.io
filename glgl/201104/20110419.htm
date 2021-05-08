@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta name="description" content="江明勳"><meta name="keywords" content="江明勳">
+  
+   
+  <title>嘰哩呱啦ACE---江明勳老師的網誌</title>
+
+  
+  <base target="_blank">
+</head><body>
+<div align="center">
+<center>
+<table style="background-color: white; width: 610px; text-align: left; margin-left: auto; margin-right: auto; border-collapse: collapse;" border="1" bordercolor="#a980ff" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td><b><font color="#ffffff"><img style="width: 610px; height: 201px;" alt="" src="bg/DSC09021.jpg"><br>
+      </font></b> </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);" height="30">
+      <p style="text-align: center;"><b><font color="#ffffff">20110419--嘰哩呱啦ACE--第947回--</font></b><b><font color="#ffffff">自由的風-4-安裝 ezgo8 到硬碟<br>
+</font></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(153, 153, 255);">
+      <ul>
+        <li>今天學校校內有地震逃生和消防演練，我有兩個班的兩節英語課因此無法上，可是一週又只有一節英語課，沒上到我會很痛苦，只好找時間補上了。</li>
+      </ul>
+      
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 255);">
+      <div align="center">
+      <center>
+      <table style="border-collapse: collapse; width: 600px;" id="AutoNumber1" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li>「自由的風」系列，我已經寫過：</li>
+              <ul>
+                <li>20110415--<a href="http://web.ntct.edu.tw/blog/glglace/archives/7773">第945回</a>--自由的
+風-1- Persistent Live USB 製作</li>
+                <li>20110418--<a href="http://web.ntct.edu.tw/blog/glglace/archives/7786">第946回</a>--自由的
+風-2-讓 persistant 生效</li>
+                <li>20110408--<a href="http://web.ntct.edu.tw/blog/glglace/archives/7677">第940回</a>--自由的
+風-3-用Wine跑光影魔術手<br>
+　<br>
+                </li>
+              </ul>
+              <li>本回紀錄的是，4/11我將阿剛老師打包的TPET in ezgo8 mac主題重包版
+，安裝到電腦教室的學生電腦硬碟中，做成 Ubuntu 和 Win7 多重開機。<br>
+　<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" style="width: 600px; text-align: center; background-color: rgb(153, 51, 153);">
+            <big style="color: white; font-weight: bold;">重新劃分電腦教室學生電腦硬碟
+的磁碟區</big><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              
+              <li style="color: red;">為什麼要安裝到硬碟？</li>
+              <ul>
+                <li>安裝到硬碟有其困難度，一不小心可能會毀掉電腦裡面的所有資料，但比起用光碟或隨身碟來使用 Ubuntu，<span style="color: red;">效能好很多！</span><br>
+　<br>
+                </li>
+              </ul>
+              <li>這臺電腦送來學校時就已經預先做好 C: 和 D: 兩個分個區，<span style="color: red;">我要將 D: 的部分切割出一部份來給 Ubuntu 使用</span>。步驟如下：<br>
+              </li>
+
+              
+              <ul>
+                <li>開啟電腦，以Teacher身份登入 Win7</li>
+                <li>複製D:中要保留的檔案到C:上</li>
+                <li>開啟管理介面</li>
+                <li>刪除D:</li>
+                <li>先增加一個磁碟區 30597MB，不格式化，準備給 Ubuntu用</li>
+                <ul>
+                  <li><span style="color: red;">注意！</span>要用來安裝 Ubuntu的分割區最好不要是數個分個區中的最後一個，我一年多前有次將 Ubuntu
+安裝在硬碟的最後一個磁碟區，但過幾天後該磁碟區莫名奇妙消失，查了一些資料說大容量硬碟最好把 Ubuntu 作業系統安裝在比較前面的磁碟區。</li>
+                </ul>
+                <li>再增加一個磁碟區200000MB，格式化NTFS</li>
+                <li>刪除磁碟區 30597MB，這樣等一下安裝 Ubuntu 時比較方便。</li>
+                <li>把剛剛複製到C:的資料再搬回D:</li>
+                <li>關機<br>
+                  <br>
+                </li>
+              </ul>
+              <li>以下是上述步驟的圖解，4/12 請三個學生義工來幫忙這個部分，大約20分鐘就做好20臺，我很開心，學生也很有成就感。<br>
+              </li>
+
+              
+              
+              
+              
+              
+              
+              
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 309px;" alt="" src="illustration/free-wind/partition-02.jpg">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <br>
+</td>
+          </tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 538px;" alt="" src="illustration/free-wind/partition-01.jpg">
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 353px;" alt="" src="illustration/free-wind/partition-03.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 311px;" alt="" src="illustration/free-wind/partition-04.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 385px;" alt="" src="illustration/free-wind/partition-05.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 379px;" alt="" src="illustration/free-wind/partition-06.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 386px;" alt="" src="illustration/free-wind/partition-07.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 378px;" alt="" src="illustration/free-wind/partition-08.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 378px;" alt="" src="illustration/free-wind/partition-08.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 375px;" alt="" src="illustration/free-wind/partition-09.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 126px;" alt="" src="illustration/free-wind/partition-10.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 371px;" alt="" src="illustration/free-wind/partition-11.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 371px;" alt="" src="illustration/free-wind/partition-12.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 399px;" alt="" src="illustration/free-wind/partition-13.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 392px;" alt="" src="illustration/free-wind/partition-14.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 377px;" alt="" src="illustration/free-wind/partition-15.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 600px; height: 385px;" alt="" src="illustration/free-wind/partition-16.jpg"><br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <br>
+</td>
+</tr>
+<tr>
+<td colspan="6" width="600"> <img style="width: 609px; height: 441px;" alt="" src="illustration/free-wind/partition-17.jpg"><br>
+</td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td colspan="6" width="600"> 　<br>
+</td>
+</tr>
+          <tr style="color: white;">
+            <td colspan="6" style="width: 600px; text-align: center; background-color: rgb(153, 51, 153);">
+            <big><span style="font-weight: bold;">將TPET in Ezgo8安裝到硬碟</span></big><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              
+              <li> 插入我<a href="http://web.ntct.edu.tw/blog/glglace/archives/7773">第945回 </a>製作的
+Live USB 隨身碟，您也可以<a href="http://ezgo.westart.tw/modules/tadnews/page.php?nsn=8">下載 ezgo8 的 iso檔</a>來使用<br>
+              </li>
+
+              </ul>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" width="300"><img style="width: 299px; height: 224px;" alt="" src="illustration/free-wind/syslinux-6.jpg"><br>
+            </td>
+            <td colspan="3" width="300"> <img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-2.jpg"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>電腦一開機就馬上選 F12，然後選  USB 隨身碟開機</li>
+              <li>您電腦和隨身碟不見得與我的相同，所以可能會看到不一樣的文字。</li>
+            </ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="3" width="300"><img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-3.jpg"><br>
+            </td>
+            <td colspan="3" width="300"> <img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-4.jpg"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>選 install</li>
+              <li>選中文繁體<br>
+              </li>
+            </ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="3" width="300"><img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-5.jpg"><br>
+            </td>
+            <td colspan="3" width="300"> <img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-6.jpg"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>確定無誤就按「向前」，意思就是「下一步」啦！</li>
+            </ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 450px;" alt="" src="illustration/free-wind/install-7.jpg"> </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>這裡很重要！要非常小心！</li>
+              <li>選擇「使用最大的連續可用空間」，就是剛剛我刪除的那個30597MB磁碟區。<br>
+              </li>
+            </ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="3" width="300"><img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-8.jpg"><br>
+            </td>
+            <td colspan="3" width="300"> <img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-9.jpg"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>輸入自訂的使用者帳密</li>
+              <li>選擇要不要匯入同一臺電腦中 windows 使用者的資料<br>
+              </li>
+            </ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="3" width="300"><img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-10.jpg"><br>
+            </td>
+            <td colspan="3" width="300"> <img style="width: 300px; height: 225px;" alt="" src="illustration/free-wind/install-11.jpg"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>前置步驟全部都做好了，勇敢的選擇「安裝」吧！</li>
+              <li>安裝過程大約20分鐘。</li>
+            </ul>
+</td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr>
+            <td width="100"><br>
+            </td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </div>
+      <ul>
+        <li>85分鐘完成本回。</li>
+      </ul>
+      <p>　</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);">
+      <div style="text-align: center;"><br>
+      <img style="width: 88px; height: 31px;" alt="創用CC「姓名標示-相同方式分享 3.0」" src="bg/cc-by-sa-3.0.png"><br>
+      </div>
+      <ul>
+        <li><b><font color="#ffffff">嘰哩呱啦ACE---
+江明勳老師的網誌 </font></b>
+          <ul>
+            <li><font color="#ffffff">作者：南投縣永興國小江明勳老師 glglace@gmail.com
+              </font> </li>
+            <li><font color="#ffffff">授權：</font><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW"><font color="#ffffff">創用CC「姓名標示-相同方式分享 3.0」</font></a></li>
+            <li><font color="#ffffff">網址： </font> <a href="http://163.22.105.1/%7Ejames/glgl/"> <font color="#ffffff">http://163.22.105.1/~james/glgl/</font></a><font color="#ffffff"> </font> </li>
+            <li><font color="#ffffff">迴響：歡迎提供意見或相關連結讓我修改本文</font></li>
+            <li><font color="#ffffff">自第301回起，同步刊載於</font><a href="http://web.ntct.edu.tw/blog/"><font color="#ffffff">南投縣教師部落格</font></a><font color="#ffffff">中，歡迎來</font><a href="http://web.ntct.edu.tw/blog/glglace/"><font color="#ffffff">參觀</font></a></li>
+          </ul>
+        </li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+
+<br>
+
+<br>
+
+</body></html>

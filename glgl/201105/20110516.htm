@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta name="description" content="江明勳"><meta name="keywords" content="江明勳">
+  
+   
+  <title>嘰哩呱啦ACE---江明勳老師的網誌</title>
+
+  
+  <base target="_blank">
+</head><body>
+<div align="center">
+<center>
+<table style="background-color: white; width: 610px; text-align: left; margin-left: auto; margin-right: auto; border-collapse: collapse;" border="1" bordercolor="#a980ff" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td><b><font color="#ffffff"><img style="width: 610px; height: 200px;" alt="" src="bg/DSC09884.jpg"><br>
+      </font></b> </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);" height="30">
+      <p style="text-align: center;"><b><font color="#ffffff">20110516--嘰哩呱啦ACE--第966回--</font></b><b><font color="#ffffff">自由的風-23-ubuntu免帳號登入</font></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(153, 153, 255);">
+      <ul>
+        <li>上週四晚上女兒發燒，隔天早上還要考第二次月考，還好是上週五的第1節考，考完後我帶她就近去一家在水裡火車站附近的診所，很久沒去這家了，應該有四年多吧！沒想到水裡郵局旁開了一條新路之後，原本很難停車的診所，變成超好停車的了。<br>
+</li>
+      </ul>
+      
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 255);">
+      <div align="center">
+      <center>
+      <table style="border-collapse: collapse;" id="AutoNumber1" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="600">
+        <tbody>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li>我
+在<a href="http://web.ntct.edu.tw/blog/glglace/archives/8069">第964回</a>提到
+在學校電腦教室中使用ezgo8會有詞音輸入法當機的問題，而且也找到解決的辦法，所以想把每一臺學生電腦的桌面佈景從
+macbuntu改回ubuntu
+的預設桌面佈景，但由於我是讓每個學生在自己使用的那臺學生電腦上建立自己的帳密，所以我想如果我要改桌面，得用學生的帳密登入才能改，可是一個一個問學
+生又太麻煩了，不知道有沒有什麼方法可以在不知道使用者密碼的情況下登入該使用者的桌面呢？<br>
+　　<br>
+              </li>
+              <li>沒關係，噗友是萬能的，<a href="http://www.plurk.com/p/c5ip0w">發個噗
+問噗友吧！</a></li>
+              <ul>
+                <li>我在2011512的19:32發問</li>
+                <li>2011512的20:44 雄哥告訴我一個辦法</li>
+                <ul>
+                  <li>在 ezgo8 裡測試，用帳號/群組的管理工具把該帳號加入 nopasswordlogin 的
+group</li>
+                </ul>
+                <li>2011512的21:00 我依樣畫葫蘆試試看，哇~成功了！<br>
+　<br>
+                </li>
+              </ul>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 223px;" alt="" src="illustration/nopasswd/nopassword-1.png"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li> 首先要找到使者及群組管理的介面<br>
+　<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 394px;" alt="" src="illustration/nopasswd/nopassword-2.png"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li>目前登入的使用者必須要有系統管理者的權限才能管理群組<br>
+　<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 358px;" alt="" src="illustration/nopasswd/nopassword-3.png"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li>找到 nopasswdlogin 這個群組<br>
+　<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 348px;" alt="" src="illustration/nopasswd/nopassword-4.png"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600">
+            <ul>
+              <li>將您想要將之變成不用密碼也能登入的使用者，打勾按確定，以本例而言我選的是 testtest使用者。<br>
+　<br>
+              </li>
+              <li>登出目前使用者，改成用testtest登入，就會發現不用密碼也能登入啦！登入後做完想做您想做的更改，再回到有
+系統管理者的權限的使用者登入，然後再去nopasswdlogin 這個群組取消打勾，這樣testtest使用者又變成需要密碼才能登入了，而且不會
+變動到他原來的密碼。<br>
+　<br>
+              </li>
+              <li>後來我又想到其實不用這麼麻煩啦~ 以我在<a href="http://web.ntct.edu.tw/blog/glglace/archives/8069">第964回</a>所想做的
+事：刪除同一臺電腦其他使用者家目錄裏面的 .gconf .gconfd .gnome2，只要先用有系統管理者的權限的使用者登入，然後開終端機，輸入 sudo rm -rf /home/使用者/ .gconf /home/使用者/.gconfd /home/使用者/.gnome2 這樣就行了。<br>
+</li>
+            </ul>
+            </td>
+          </tr>
+          
+          <tr>
+            <td width="100"><br>
+            </td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </div>
+      <ul>
+        <li>55分鐘完成本回。</li>
+      </ul>
+      <p>　</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);">
+      <div style="text-align: center;"><br>
+      <img style="width: 88px; height: 31px;" alt="創用CC「姓名標示-相同方式分享 3.0」" src="bg/cc-by-sa-3.0.png"><br>
+      </div>
+      <ul>
+        <li><b><font color="#ffffff">嘰哩呱啦ACE---
+江明勳老師的網誌 </font></b>
+          <ul>
+            <li><font color="#ffffff">作者：南投縣永興國小江明勳老師 glglace@gmail.com
+              </font> </li>
+            <li><font color="#ffffff">授權：</font><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW"><font color="#ffffff">創用CC「姓名標示-相同方式分享 3.0」</font></a></li>
+            <li><font color="#ffffff">網址： </font> <a href="http://163.22.105.1/%7Ejames/glgl/"> <font color="#ffffff">http://163.22.105.1/~james/glgl/</font></a><font color="#ffffff"> </font> </li>
+            <li><font color="#ffffff">迴響：歡迎提供意見或相關連結讓我修改本文</font></li>
+            <li><font color="#ffffff">自第301回起，同步刊載於</font><a href="http://web.ntct.edu.tw/blog/"><font color="#ffffff">南投縣教師部落格</font></a><font color="#ffffff">中，歡迎來</font><a href="http://web.ntct.edu.tw/blog/glglace/"><font color="#ffffff">參觀</font></a></li>
+          </ul>
+        </li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+
+<br>
+
+<br>
+
+</body></html>

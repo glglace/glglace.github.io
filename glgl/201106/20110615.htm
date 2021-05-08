@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+
+<meta name="description" content="江明勳"><meta name="keywords" content="江明勳">
+   <title>嘰哩呱啦ACE---江明勳老師的網誌</title>
+  
+  <base target="_blank"></head><body>
+<div align="center">
+<center>
+<table style="background-color: white; width: 610px; text-align: left; margin-left: auto; margin-right: auto; border-collapse: collapse;" border="1" bordercolor="#a980ff" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td><b><font color="#ffffff"><img style="width: 610px; height: 200px;" alt="" src="bg/DSC03675.jpg"><br>
+      </font></b> </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);" height="30">
+      <p style="text-align: center;"><b><font color="#ffffff">20110615--嘰哩呱啦ACE--第988回--</font></b><b><font color="#ffffff">自由的風-36-清理儲存空間</font></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(153, 153, 255);">
+      <ul>
+        <li>今天又送走了一批畢業生，這次的畢業典禮改由五年級學生來當主持人，臺風相當不錯，還有別開生面的校隊交接儀式，笑中帶淚，典禮流程既有傳統也有創新，感覺十分溫馨。<br>
+</li>
+      </ul>
+      
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 255);">
+      <div align="center">
+      <center>
+      <table style="border-collapse: collapse;" id="AutoNumber1" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="600">
+        <tbody>
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>承接前天的<a href="http://web.ntct.edu.tw/blog/glglace/archives/8294">第986回</a>–自由的風-35-磁碟用量分析器，6/12 想清理 ubuntu 裡的垃圾，第一個想到的是「電腦垃圾清道夫」，一執行就自己開始分析系統</li>
+              <ul>
+                <li>系統=&gt;管理=&gt;電腦垃圾清道夫</li>
+              </ul>
+</ul>
+</td>
+          </tr>
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 541px;" alt="" src="illustration/clean/clean-01.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>
+            結果它提供的刪除建議，似乎是根據該軟體有沒有在官方的套件庫，使用者要自己決定該軟體的去留，這對我來說並不實用。例如 scratch 我不想刪除但卻在名單之列。<br>
+　<br>
+              </li>
+              <li>於是上網找資料，找到一篇<a href="http://www.openfoundry.org/tw/foss-programs/8307--debianubuntu-">自由軟體鑄造場－源碼秘技－清理 Debian/Ubuntu 儲存空間</a>覺得不錯，想照著作作看並紀錄一下效果。</li>
+              <ol>
+                </ol>
+              <ul>
+                <li>sudo apt-get clean</li>
+              </ul>
+              <ol>
+
+                <ul>
+                  <li>使用量從12GB降到11.8G</li>
+                </ul>
+                
+              </ol>
+</ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 482px;" alt="" src="illustration/clean/localepurge-1.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>localepurge</li>
+              <ul>
+<li>安裝</li><ul><li>sudo apt-get install localepurge</li></ul><li>設定語系</li><ul><li>我選擇保留 en,zh,zh-tw 這3個<br>
+　<br>
+</li></ul>
+              </ul>
+            </ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 235px;" alt="" src="illustration/clean/localepurge-2.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>回報說清出了約 147MB<br>
+　<br>
+
+            </li>
+            </ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 846px;" alt="" src="illustration/clean/bleachbit.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>BleachBit (類似windows下的CCleaner)</li>
+              <ul>
+<li>安裝</li><ul><li>sudo apt-get install bleachbit</li></ul><li>執行</li><ul><li>主選單=&gt;系統工具=&gt; BleachBit (as root)</li><li>是有清除一些但都不是佔用很大空間的<br>
+　<br>
+</li></ul>
+              </ul>
+            </ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 600px; height: 357px;" alt="" src="illustration/clean/chrome-cache.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>我又清除 chrome 和 firefox 的快取<br>
+　<br>
+              </li>
+            </ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> <img style="width: 599px; height: 400px;" alt="" src="illustration/clean/remastersys-too-large.png"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>另外我又清除了桌面上暫放的資料，這樣總共使用了10.9GB，來<a href="http://web.ntct.edu.tw/blog/glglace/archives/7855">remastersys</a> 試試看吧！很遺憾的是，remastersys的backup選項是要在 4.7G以內的 iso檔才能做得出來，看來只好使用 <a href="http://clonezilla.nchc.org.tw/clonezilla-live/">clonezilla</a>來備份了。
+            </li>
+            </ul>
+</td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr>
+            <td width="100"><br>
+            </td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100"></td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </div>
+      <ul>
+        <li>70分鐘完成本回。</li>
+      </ul>
+      <p>　</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);">
+      <div style="text-align: center;"><br>
+      <img style="width: 88px; height: 31px;" alt="創用CC「姓名標示-相同方式分享 3.0」" src="bg/cc-by-sa-3.0.png"><br>
+      </div>
+      <ul>
+        <li><b><font color="#ffffff">嘰哩呱啦ACE---
+江明勳老師的網誌 </font></b>
+          <ul>
+            <li><font color="#ffffff">作者：南投縣永興國小江明勳老師 glglace@gmail.com
+              </font> </li>
+            <li><font color="#ffffff">授權：</font><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW"><font color="#ffffff">創用CC「姓名標示-相同方式分享 3.0」</font></a></li>
+            <li><font color="#ffffff">網址： </font> <a href="http://163.22.105.1/%7Ejames/glgl/"> <font color="#ffffff">http://163.22.105.1/~james/glgl/</font></a><font color="#ffffff"> </font> </li>
+            <li><font color="#ffffff">迴響：歡迎提供意見或相關連結讓我修改本文</font></li>
+            <li><font color="#ffffff">自第301回起，同步刊載於</font><a href="http://web.ntct.edu.tw/blog/"><font color="#ffffff">南投縣教師部落格</font></a><font color="#ffffff">中，歡迎來</font><a href="http://web.ntct.edu.tw/blog/glglace/"><font color="#ffffff">參觀</font></a></li>
+          </ul>
+        </li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+<br>
+<br>
+</body></html>

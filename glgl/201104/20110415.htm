@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta name="description" content="江明勳"><meta name="keywords" content="江明勳">
+
+
+
+
+   <title>嘰哩呱啦ACE---江明勳老師的網誌</title>
+  
+  <base target="_blank"></head><body>
+<div align="center">
+<center>
+<table style="background-color: white; width: 610px; text-align: left; margin-left: auto; margin-right: auto; border-collapse: collapse;" border="1" bordercolor="#a980ff" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td><b><font color="#ffffff"><img style="width: 610px; height: 200px;" alt="" src="bg/DSC08892.jpg"><br>
+      </font></b> </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);" height="30">
+      <p style="text-align: center;"><b><font color="#ffffff">20110415--嘰哩呱啦ACE--第945回--</font></b><b><font color="#ffffff">自由的風-1- Persistent Live USB 製作<br>
+      </font></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(153, 153, 255);">
+      <ul>
+        
+        <li>我把<a href="http://web.ntct.edu.tw/blog/glglace/archives/7677">第940回</a>的
+標題改為「自由的風-3-用Wine跑光影魔術手」，根據最近的使用經驗，覺得很有希望轉移到 Linux
+平臺上做我平常會用電腦做的大小事。我想我應該會寫很多回網誌，因此也取了一個系列名稱，原本想的是「自由之路」但覺得似乎有點心酸，後來腦中響起優客李
+林的歌聲，我聽到「自由的風」這四個字，可是上網查來查去似乎沒有這首歌，最接近的是「多情種」這首歌裡面的最後一句「誰能說愛人的心不是冷漠世界裡，最
+溫柔的風」，不過倒也找到杜德偉有一首歌真的叫做「自由的風」，歌詞也蠻符合我想寫這一系列文章的心境的，就這麼訂了吧！<br>
+        </li>
+</ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 255);">
+      <div align="center">
+      <center>
+      <table style="border-collapse: collapse;" id="AutoNumber1" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="600">
+        <tbody>
+          
+          <tr>
+            <td colspan="6" width="600"> 
+            <ul>
+              <li>3/26看到教育噗浪客的阿剛老師<a href="http://www.plurk.com/p/bctz7u">發了一個噗</a>：檔案分享<a href="http://163.27.209.67/ezgo8/TPET_in_ezgo8_menu_mac_1000325.iso">TPET in ezgo8 mac主題重包版</a> 可自訂使用者名稱。在該噗中小P老師問要如何安裝在隨身碟上？阿剛老師提供了一個方法：<a href="http://www.techbang.com.tw/posts/3311-20-grams-linux-laptop-work-life-carry-on-xu-mengkui">T客邦：靠一支隨身碟，Ubuntu系統、檔案、設定全包</a>，我很有興趣想嘗試看看。<br>
+　<br>
+              </li>
+              <li>我有一個閒置的8G隨身碟，正好拿來試試：</li>
+              <ol>
+                <li>下載阿剛老師打包的<a href="http://163.27.209.67/ezgo8/TPET_in_ezgo8_menu_mac_1000325.iso">TPET in ezgo8 mac主題重包版<br>
+                  </a>檔名是 TPET_in_ezgo8_menu_mac_1000325.iso<br>
+                </li>
+                <li>到 <a href="http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/">Universal USB Installer – Easy as 1 2 3</a> 網頁中去下載「Universal USB Installer」，這個軟體是採用 GNU GPL 授權的自由軟體。<br>
+                </li>
+                <li>執行「Universal USB Installer」</li>
+                <li>以把<a href="http://163.27.209.67/ezgo8/TPET_in_ezgo8_menu_mac_1000325.iso"> TPET in ezgo8 mac主題重包版</a>裝到8G隨身碟為例：</li>
+                <ul>
+                  <li>步驟一 Step1 選擇要哪一種 Linux 發行版<br>
+                  </li>
+                  <ul>
+                    <li>下拉選單中選擇 Ubuntu 10.04.X</li>
+                  </ul>
+                  <li>步驟二 Step2 指定 iso 檔所在路徑<br>
+                  </li>
+                  <ul>
+                    <li>這裡對 iso 檔的檔名有嚴格規定，所以請將TPET_in_ezgo8_menu_mac_1000325.iso<br>
+改名為 ubuntu-10.04-desktop.iso</li>
+                  </ul>
+                  <li>步驟三 Step3 選擇USB隨身碟所在的磁碟機代號</li>
+                  <ul>
+                    <li>這裡要很小心，千萬不要弄錯！</li>
+                    <li>選擇要 format 格式化，注意！隨身碟上現有的資料都會不見喔！</li>
+                  </ul>
+                  <li>步驟四 Step4 選擇 Persistant file 的大小</li>
+                  <ul>
+                    <li>Persistant file 的用途是用來儲存您所做的設定和檔案，如此一來就不會每一次開機都還原回預設狀態，這是與 Live CD 最大的不同。<br>
+                    </li>
+                    <li>最大可以設到 4G，以8G隨身碟為例，建議設3G，因為阿剛老師打包的這個 iso檔裝到隨身碟上大約會用掉4.3G。</li>
+                  </ul>
+                  <li>按下 Create 按鈕，開始製作。<br>
+　<br>
+                  </li>
+                </ul>
+              </ol>
+            </ul>
+</td>
+          </tr>
+          
+          <tr>
+            <td style="text-align: center;" colspan="6" width="600"> <img style="width: 512px; height: 397px;" alt="" src="illustration/free-wind/universal-usb-installer.jpg"><br>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="6" width="600"> 　
+            <ul>
+              <li>3/27 晚上九點做好了一支隨身碟，拿去我家裡最新最快的一臺<a href="http://www.mobile01.com/topicdetail.php?f=513&amp;t=1423539&amp;r=6">小電腦</a>上跑跑看，用瀏覽器上網感覺還好，但開天文軟體 Stellarium 來使用覺得很鈍，完全不能接受。<br>
+　</li>
+<li>3/29 早上八點多拿到學校電腦教室的學生電腦上測試，去年十月來的新電腦，發現跑起來很順暢，開 LibreOffice的writer、calc、impress 都是三、五秒就開好了，連 Stellarium 中讓星空加速移動都非常滑順，真是太滿意了！</li>
+            </ul>
+
+            </td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr>
+            <td width="100"><br>
+            </td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+            <td width="100">　</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </div>
+      <ul>
+        <li>60分鐘完成本回。　</li>
+      </ul>
+      
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 51, 153);">
+      <div style="text-align: center;"><br>
+      <img style="width: 88px; height: 31px;" alt="創用CC「姓名標示-相同方式分享 3.0」" src="bg/cc-by-sa-3.0.png"><br>
+      </div>
+      <ul>
+        <li><b><font color="#ffffff">嘰哩呱啦ACE---
+江明勳老師的網誌 </font></b>
+          <ul>
+            <li><font color="#ffffff">作者：南投縣永興國小江明勳老師 glglace@gmail.com
+              </font> </li>
+            <li><font color="#ffffff">授權：</font><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW"><font color="#ffffff">創用CC「姓名標示-相同方式分享 3.0」</font></a></li>
+            <li><font color="#ffffff">網址： </font> <a href="http://163.22.105.1/%7Ejames/glgl/"> <font color="#ffffff">http://163.22.105.1/~james/glgl/</font></a><font color="#ffffff"> </font> </li>
+            <li><font color="#ffffff">迴響：歡迎提供意見或相關連結讓我修改本文</font></li>
+            <li><font color="#ffffff">自第301回起，同步刊載於</font><a href="http://web.ntct.edu.tw/blog/"><font color="#ffffff">南投縣教師部落格</font></a><font color="#ffffff">中，歡迎來</font><a href="http://web.ntct.edu.tw/blog/glglace/"><font color="#ffffff">參觀</font></a></li>
+          </ul>
+        </li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+<br>
+<br>
+</body></html>
