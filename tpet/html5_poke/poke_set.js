@@ -32,7 +32,8 @@ mediaFolder = 'data';
 // 每一洞上可使用的圖檔檔名，以半形逗號分隔不同的檔名(參考fields_seperator)
 // 預設的小精靈圖案取自 openclipart (https://openclipart.org/)
 //
-paper = 'alien.png,angel.png,base.png,billy.png,borg.png,bricky.png,camouflage.png,candy.png,chef.png';
+paper = '01.png,02.png,03.png,04.png,05.png,06.png,07.png,08.png,09.png,10.png,11.png,12.png';
+
 
 // 每一格的黑色外框線粗細大小
 blackborder = 5
@@ -70,5 +71,12 @@ question = new Array(
 , '圖片中的動物英文是什麼？#sample/cat.png,1'
 , '聽聽看，它的中文該怎麼說？#sample/eye.mp3,1'
 , '聽聽看，在圖中出找出她說的部位#sample/cat.png#sample/eye.mp3,1'
+, 'eye 的中文是什麼？,1'
+, 'sample/cat.png,1'
+, 'sample/eye.mp3,1'
+, '圖片中的動物英文是什麼？#sample/cat.png,1'
+, '聽聽看，它的中文該怎麼說？#sample/eye.mp3,1'
+, '聽聽看，在圖中出找出她說的部位#sample/cat.png#sample/eye.mp3,1'
 //------------------------------------題庫結束,以下請勿修改
 );
+
