@@ -1,1 +1,0 @@
-top.opener.GetCurrentEditor().wrapWidth = 9999
