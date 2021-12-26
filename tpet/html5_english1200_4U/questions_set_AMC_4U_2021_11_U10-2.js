@@ -76,144 +76,28 @@ They may cry to make the other person feel guilty. ##他們可能會哭泣來讓
 pose##提出、擺姿勢
 quid pro quo## (拉丁文)交換條件、賠償
 Tantalizers pose threats as quid pro quo, such as "If you do this thing for me, I'll do something nice for you." ##欲擒故縱者會用威脅當作籌碼，像是「如果你為我這樣做，我就會給你好處」，
-##
-##
-##
-##
+cycle##循環
+repeat##重複
 It seems like a gift, but the cycle keeps repeating with more and more demands. ##乍聽像是個禮物，但這個循環會伴隨越來越多的要求不斷重複。
-##
-##
-##
-##
+end##結束、終點
+bring A to an end##把 A 做結束
 How can you bring emotional blackmail to an end?##要如何結束情緒勒索？
-##
-##
-##
-##
+firm##[形]結實的、堅固的、確定的、強硬的 [名]公司
+firmly##堅固地、堅決地
+express##表達
+boundary##界線
 Firmly express your boundaries. ##你要堅決地表示你的界限，
-##
-##
-##
-##
+right## [名]對的、正確的 [名]權利
 You have the right to say "no."##你有權利說「不」，
-##
-##
-##
-##
-You can also try talking to the person to solve the problem. ##也能嘗試告訴他人來解決問題。
-##
-##
-##
-##
-Also, a capable therapist can assist you with all these approaches. ##此外，有能力的治療師能用盡所有的辦法幫助你。
-##
-##
-##
-##
-If nothing works, it's best to walk away from the relationship.##如果都沒有用，你最好要遠離這段關係。
-
-why##為什麼
-Tutankhamun##圖坦卡門
-tomb##墳墓
-continue##繼續
-excite##使...興奮
-people##人們
-Why Tutankhamun's Tomb Continues to Excite People##揭開圖坦卡門陵墓的神秘面紗
-game over##遊戲結束
-over there##在那裡
-over one year##超過一年
-early##早的
-death## [名]死亡
-remain##保持
-mystery##謎、神秘的事物
-Over the years, Tutankhamun's early death has remained a mystery. ##這些年來，圖坦卡門的早逝始終成謎。
-expert##專家
-theory##理論
-theories##理論(複數)
-break## [原形動詞]中斷、打破、弄壞
-broke## [過去式動詞]中斷、打破、弄壞
-broken##[過去分詞]中斷、打破、弄壞
-chariot##雙輪馬車
-accident##意外、事故
-Many experts have had many theories, from a broken leg to a chariot accident. ##許多專家一直持有很多看法，從一條骨折的腿到雙輪馬車的事故都有，
-theories##理論(複數)
-prove##[原形動詞]證明
-proven##[過去分詞]被證明
-clue##線索
-conclude##[原形動詞]以...做結束
-conclusive##[形容詞]有結論性的、不用懷疑的
-probably##也許
-reason##原因
-behind##在 ... 後面
-behind me##在我後面
-pharaoh##法老
-death## [名]死亡
-However, none of these theories have proven conclusive, and we'll probably never know the real reason behind the pharaoh's death.##但沒有一項推測能被證實，而我們也大概永遠不會知道法老真正的死因。
-likely##很可能的，可能要發生的
-It's likely##這很可能是
-though##雖然
-thought## 想法 think 動詞轉名詞
-born##[過去分詞]出生
-major##主要的
-mayor##市長
-ill##生病的
-illness##[名]疾病
-cause##造成、導致
-It's likely, though, that Tutankhamun was born with a major illness that caused his early death.##儘管如此，圖坦卡門很有可能是在出生時就患有嚴重疾病，造成他的早逝。
-interest## 興趣
-A is interesting to B## B人 對 A事有興趣
-A is interested inB## A人 對 B事有興趣
-relate## [動]關係
-related## [形]有關係的
-relation## [名]關係
-relative## [名]親戚
-The pharaoh's death isn't the only interesting death related to Tutankhamun. ##法老的逝世並不是唯一一個和圖坦卡門有關且受到關注的死亡。
-since##自從
-cover##蓋子、掩蓋
-discover##[動]發現
-discovery##[名]發現
-tomb##墳墓
 talk##談話
-curse##詛咒
-pharaoh##法老
-Since the discovery of his tomb, people have talked about a "curse of the pharaohs." ##自從他的陵墓被發現以來，人們就有在談論關於「法老的詛咒」。
-Lord##主人、勳爵、爵位
-Carnarvon##卡那封
-enter##進入
-In 1923, Lord Carnarvon was one of the first people to enter the tomb. ##1923 年，卡那封勳爵是其中一位最早進入陵墓的人，
-month##月
-late##遲到的、晚的
-later##稍後的、稍晚的
-die##死
-mosquito##蚊子
-bite##咬
-Two months later, he died from a mosquito bite. ##而他在兩個月後死於蚊子的叮咬。
-consider##考慮
-considerable number##相當多的數量
-other##其他
-A considerable number of other people who had been in the tomb also died from illnesses. ##許多其他曾經進入陵墓的人也都死於疾病，
-result##結果
-news##新聞
-newspaper##報紙
-begin##開始
-write##寫
-story, stories##故事
-claim##宣稱、宣告
-whoever##不論是誰
-disturb##打擾
-soon##很快的
-As a result, newspapers began to write stories claiming that whoever disturbs the tomb will soon die.##因此報社開始撰寫報導，斷言凡是打擾過陵墓的人都會很快死去。
-next##下一個
-mark##記號
-on the mark##體育比賽時的口令：各就各位
-since##自從
-discovery##發現
-Next year marks 100 years since the discovery of Tutankhamun's tomb. ##明年是圖坦卡門陵墓被發現的一百週年。
-mystery, mysteries## 謎、神秘的事物
-ancient##古代的
-continue##繼續
-around##在...周圍
-around the world##全世界
-to this day##直到如今
-The mysteries of the ancient pharaoh continue to interest people around the world to this day. ##直至今日，古埃及法老的神秘持續地引起世界各地人們的興趣。
+You can also try talking to the person to solve the problem. ##也能嘗試告訴他人來解決問題。
+capable##有能力的
+therapist##治療師
+assist## 協助
+approach## [動]靠近、處理 [名]方法
+Also, a capable therapist can assist you with all these approaches. ##此外，有能力的治療師能用盡所有的辦法幫助你。
+walk##走路
+walk away##走開、脫身
+relationship##關係
+If nothing works, it's best to walk away from the relationship.##如果都沒有用，你最好要遠離這段關係。
 -----*/}.toString().slice("function(){/*--這一行請勿更改--".length+2+(typeof(CR_LF_First_Pos)!='undefined' ? CR_LF_First_Pos:0),-9);
