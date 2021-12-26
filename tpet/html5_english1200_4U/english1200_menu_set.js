@@ -19,7 +19,8 @@ menu_title='English1200';		//選單標題
 //
 menu_items = new Array(
 //------------------------------------下一行開始為選單增加項目
- '4U 202111 U8 圖坦卡門-1,questions_set_AMC_4U_2021_11_U8-1.js'
+ '4U 202111 U10 情緒勒索-1,questions_set_AMC_4U_2021_11_U10-1.js'
+,'4U 202111 U8 圖坦卡門-1,questions_set_AMC_4U_2021_11_U8-1.js'
 ,'4U 202111 U8 圖坦卡門-2,questions_set_AMC_4U_2021_11_U8-2.js'
 ,'4U 202111 U9 頑皮世界,questions_set_AMC_4U_2021_11_U9.js'
 ,'4U 202111 U7 全球暖化,questions_set_AMC_4U_2021_11_U7.js'
