@@ -50,40 +50,31 @@ seperator = '##';
 //左欄為聲音檔路徑
 //右欄為中文
 questionLines = function(){/*--這一行請勿更改--
-##
-##
-##
-##
+main##主要的
+group##群體、組
+punish##責罰、處罰
+punisher##執行處罰的人
+self##自己、自身
+suffer##遭受、經歷、受苦
+sufferer##受害者
+tantalize##逗弄、折磨、吊人胃口
+tantalizer##折磨者
 Emotional blackmailers include four main groups: punishers, self-punishers, sufferers, and tantalizers. ##情緒勒索者包含四種類型：施暴型、自虐型、悲情型、欲擒故縱型。
-##
-##
-##
-##
+spin##吐絲、旋轉、編造
+fault##過錯
 Emotional blackmailers from any group may spin the problem to make it seem like the other person's fault.##任何一種類型的情緒勒索者都會轉移問題，讓這些問題看起來像是他人的錯。
-##
-##
-##
-##
+threaten##威脅
+demand##需求
+refuse##拒絕
 A punisher threatens to punish others if their demands are refused. ##施暴者的需求被拒絕時，會利用懲罰他人作為威脅。
-##
-##
-##
-##
+harm##傷害
 Self-punishers threaten to harm themselves to make the other person feel they have to help them. ##自虐者會以傷害自己作為威脅，來讓別人認為他們需要幫助這個人。
-##
-##
-##
-##
+solve##解決
 Sufferers make it seem like the other person can solve their problems.##悲情者讓別人看似能解決問題。
-##
-##
-##
-##
+fell guilty##感到罪惡
 They may cry to make the other person feel guilty. ##他們可能會哭泣來讓他人感到罪惡。
-##
-##
-##
-##
+pose##提出、擺姿勢
+quid pro quo## (拉丁文)交換條件、賠償
 Tantalizers pose threats as quid pro quo, such as "If you do this thing for me, I'll do something nice for you." ##欲擒故縱者會用威脅當作籌碼，像是「如果你為我這樣做，我就會給你好處」，
 ##
 ##
