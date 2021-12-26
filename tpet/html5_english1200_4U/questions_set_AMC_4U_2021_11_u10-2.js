@@ -50,83 +50,20 @@ seperator = '##';
 //左欄為聲音檔路徑
 //右欄為中文
 questionLines = function(){/*--這一行請勿更改--
-Victim ## 受害者
-1
-00:00:01,110 --> 00:00:04,310
-Don't Be a Victim of Emotional Blackmail
-以愛之名的傷害 ── 情緒勒索
-
-2
-00:00:05,380 --> 00:00:13,680
-Emotional blackmailers include four main groups: punishers, self-punishers, sufferers, and tantalizers. 
-情緒勒索者包含四種類型：施暴型、自虐型、悲情型、欲擒故縱型。
-
-3
-00:00:14,140 --> 00:00:20,440
-Emotional blackmailers from any group may spin the problem to make it seem like the other person's fault.
-任何一種類型的情緒勒索者都會轉移問題，讓這些問題看起來像是他人的錯。
-
-4
-00:00:20,850 --> 00:00:25,460
-•A punisher threatens to punish others if their demands are refused. 
-•施暴者的需求被拒絕時，會利用懲罰他人作為威脅。
-
-5
-00:00:25,890 --> 00:00:31,810
-•Self-punishers threaten to harm themselves to make the other person feel they have to help them. 
-•自虐者會以傷害自己作為威脅，來讓別人認為他們需要幫助這個人。
-
-6
-00:00:32,180 --> 00:00:36,960
-•Sufferers make it seem like the other person can solve their problems.
-•悲情者讓別人看似能解決問題。
-
-7
-00:00:37,040 --> 00:00:40,720
-They may cry to make the other person feel guilty. 
-他們可能會哭泣來讓他人感到罪惡。
-
-8
-00:00:41,190 --> 00:00:48,830
-•Tantalizers pose threats as quid pro quo, such as "If you do this thing for me, I'll do something nice for you." 
-•欲擒故縱者會用威脅當作籌碼，像是「如果你為我這樣做，我就會給你好處」，
-
-9
-00:00:49,110 --> 00:00:54,540
-It seems like a gift, but the cycle keeps repeating with more and more demands. 
-乍聽像是個禮物，但這個循環會伴隨越來越多的要求不斷重複。
-
-
-10
-00:00:55,110 --> 00:00:58,260
-How can you bring emotional blackmail to an end?
-要如何結束情緒勒索？
-
-11
-00:00:58,470 --> 00:01:01,240
-Firmly express your boundaries. 
-你要堅決地表示你的界限，
-
-12
-00:01:01,390 --> 00:01:03,480
-You have the right to say "no."
-你有權利說「不」，
-
-13
-00:01:03,850 --> 00:01:07,580
-You can also try talking to the person to solve the problem. 
-也能嘗試告訴他人來解決問題。
-
-14
-00:01:07,950 --> 00:01:12,630
-Also, a capable therapist can assist you with all these approaches. 
-此外，有能力的治療師能用盡所有的辦法幫助你。
-
-15
-00:01:12,820 --> 00:01:17,310
-If nothing works, it's best to walk away from the relationship.
-如果都沒有用，你最好要遠離這段關係。
-
+Emotional blackmailers include four main groups: punishers, self-punishers, sufferers, and tantalizers. ##情緒勒索者包含四種類型：施暴型、自虐型、悲情型、欲擒故縱型。
+Emotional blackmailers from any group may spin the problem to make it seem like the other person's fault.##任何一種類型的情緒勒索者都會轉移問題，讓這些問題看起來像是他人的錯。
+A punisher threatens to punish others if their demands are refused. ##施暴者的需求被拒絕時，會利用懲罰他人作為威脅。
+Self-punishers threaten to harm themselves to make the other person feel they have to help them. ##自虐者會以傷害自己作為威脅，來讓別人認為他們需要幫助這個人。
+Sufferers make it seem like the other person can solve their problems.##悲情者讓別人看似能解決問題。
+They may cry to make the other person feel guilty. ##他們可能會哭泣來讓他人感到罪惡。
+Tantalizers pose threats as quid pro quo, such as "If you do this thing for me, I'll do something nice for you." ##欲擒故縱者會用威脅當作籌碼，像是「如果你為我這樣做，我就會給你好處」，
+It seems like a gift, but the cycle keeps repeating with more and more demands. ##乍聽像是個禮物，但這個循環會伴隨越來越多的要求不斷重複。
+How can you bring emotional blackmail to an end?##要如何結束情緒勒索？
+Firmly express your boundaries. ##你要堅決地表示你的界限，
+You have the right to say "no."##你有權利說「不」，
+You can also try talking to the person to solve the problem. ##也能嘗試告訴他人來解決問題。
+Also, a capable therapist can assist you with all these approaches. ##此外，有能力的治療師能用盡所有的辦法幫助你。
+If nothing works, it's best to walk away from the relationship.##如果都沒有用，你最好要遠離這段關係。
 
 why##為什麼
 Tutankhamun##圖坦卡門
