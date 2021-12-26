@@ -62,7 +62,7 @@ Don't Be a Victim of Emotional Blackmail##[文章標題]不要成為情緒勒索
 use used used ## 使用
 control ## 控制
 someone ## 某人
-someone else## ㄑ他人
+someone else## 他人
 Have you ever been the victim of emotional blackmail, or used it to control someone else?##你曾是情緒勒索的受害者嗎？或是你曾用情緒勒索控制他人嗎？
 even ## 甚至
 consciouse ## 有意識的
@@ -72,7 +72,7 @@ tear##眼淚
 dear##親愛的
 fear##恐懼
 oblige##強迫、迫使
-obligatione##義務、職責、債務
+obligation##義務、職責、債務
 gulit##犯罪、過失、內疚
 influence##影響
 influencer##有影響力的人、網紅
@@ -106,8 +106,7 @@ upper class##上流社會
 upper grade##高年級
 lower grade##低年級
 upper hand##上面那隻手、上風、有利的位置
-If you obey, the emotional blackmailer will continue to have the upper hand.
-##如果你順從他，情緒勒索者就佔有優勢。
+If you obey, the emotional blackmailer will continue to have the upper hand.##如果你順從他，情緒勒索者就佔有優勢。
 experience##經驗
 give in##屈服、讓步、投降
 give up##放棄
