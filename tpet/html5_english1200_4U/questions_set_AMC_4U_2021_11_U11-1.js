@@ -51,7 +51,7 @@ seperator = '##';
 questionLines = function(){/*--這一行請勿更改--
 Da Vinci ## 達文西
 Robot ## 機器人
-save saving ## [動]拯救 [動名詞] 拯救 
+save, saving ## [動]拯救 [動名詞] 拯救 
 lives ## [名]生命 
 Da Vinci: The Robot That's Saving Lives ## 醫師的幫手：達文西機械手臂
 pop ## 爆開、流行音樂、汽水
@@ -81,7 +81,7 @@ surgeon ## [名] 外科醫生
 surgery ## [名] 外科手術
 surgical ## [形] 手術的
 system ## [名] 系統
-design designed ## 設計 、 被設計
+design, designed ## 設計 、 被設計
 company ## 公司 
 intuitive ## 直覺的 
 The da Vinci Surgical System was designed by an American company, Intuitive Surgical. ## 達文西手術系統由美國的直覺手術公司所設計。
@@ -119,7 +119,7 @@ study ## 讀書、研究
 led to ## 導致、促使
 history ## 歷史
 The robot was given this name because Leonardo da Vinci's study of the human body led to the first robot in history.  ## 這個機器人是因李奧納多‧達文西而得名，因為他的人體研究促成史上第一個機器人。
-Remote surgery ## 遠距手術
+remote surgery ## 遠距手術
 once ## 曾經 
 once upon a time ## 很久很久以前 （童話故事慣用的開場白） 
 NASA  ## 美國航空太空總署
