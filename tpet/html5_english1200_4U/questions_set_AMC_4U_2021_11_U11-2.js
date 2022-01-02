@@ -50,7 +50,7 @@ seperator = '##';
 //左欄為聲音檔路徑
 //右欄為中文
 questionLines = function(){/*--這一行請勿更改--
-develope ## [動] 發展
+develop ## [動] 發展
 envelope ## [名] 信封
 red envelope ## [名] 紅包
 hong bao ## [名] 紅包
@@ -84,8 +84,7 @@ patient ## 病人
 tradition ## 傳統
 traditional ## 傳統的
 method ## 方法
-The da Vinci Surgical System offers a number of benefits to patients over traditional surgery methods.
- ## 和傳統的手術方法相比，達文西手術系統可以為患者帶來一些好處。
+The da Vinci Surgical System offers a number of benefits to patients over traditional surgery methods. ## 和傳統的手術方法相比，達文西手術系統可以為患者帶來一些好處。
 reduce ## 減少
 chance ## 機會
 accident ## 意外
@@ -93,8 +92,7 @@ accidental ## 意外的
 harm ## 傷害
 cover ## 蓋子、覆蓋
 recover ## 恢復、復原
-It reduces the chances of accidental harm, and reduces recovery times.
- ## 它減少意外傷害的可能性，也縮短術後復原時間。
+It reduces the chances of accidental harm, and reduces recovery times. ## 它減少意外傷害的可能性，也縮短術後復原時間。
 claim ## 宣告、聲稱
 reduce ## 減少
 patient ## 病人
@@ -115,7 +113,7 @@ Da Vinci allows easier entry into patients' bodies, ## 達文西手術系統讓�
 camera ## 相機 
 surgeon ## [名] 外科醫生
 nake ## 裸體的
-naked eye ## 裸視 
+naked eye ## 裸眼 
 and its special cameras allow surgeons to see more than with the naked eye. ## 而且它特製的攝影鏡頭能夠讓外科醫生取得比肉眼更廣的視野。
 various ## 多種的、多樣的
 perform ## 執行
@@ -124,7 +122,7 @@ Its various arms also make performing surgery easier. ## 它的許多隻手臂�
 progress ## 進步
 robotic ## [形]機器人的
 surgery ## [名] 外科手術
-solution ### [名] 解決方案 
+solution ## [名] 解決方案 
 continue ##  繼續
 safe, safer ## 安全的、更安全的
 Progress in robotic surgery solutions, like da Vinci, will continue to make surgery safer for everyone. ## 像達文西這類的機器人手術系統的進步，將會持續帶給人們更安全的手術。
