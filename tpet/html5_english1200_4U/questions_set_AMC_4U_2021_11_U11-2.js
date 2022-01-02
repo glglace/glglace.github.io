@@ -50,17 +50,6 @@ seperator = '##';
 //左欄為聲音檔路徑
 //右欄為中文
 questionLines = function(){/*--這一行請勿更改--
-Victim ## 受害者
-move ## [動]移動
-motion ## [名]動作
-motion picture ## [名]電影、影片
-emotion ## [名]情緒 (e向外的motion動作、引申文為情緒、情感)
-Emotional ## [形]情緒的
-Da Vinci ## 達文西
-Robot ## 機器人
-save saving ## [動]拯救 [動名詞] 拯救 
-lives ## [名]生命 
-Da Vinci: The Robot That's Saving Lives ## 醫師的幫手：達文西機械手臂
 develope ## [動] 發展
 envelope ## [名] 信封
 red envelope ## [名] 紅包
@@ -76,64 +65,67 @@ prove ## [動] 證明、檢驗
 approve ## [動]批准、許可 
 approval ## [名]批准、許可  
 and the system was given Food and Drug Administration (FDA) approval in 2000. ## 而這項系統在 2000 年獲得美國食品藥物管理局的核可。
-## 
- ##
- ## 
- ##  
- Although it wasn't the first robotic surgical system to gain FDA approval, it was the first to do laparoscopic surgery.
- ## 雖然它不是第一個獲得美國食品藥物管理局核可的機器人手術系統，卻是第一個執行腹腔鏡手術的機器人系統。
-In Taiwan, the number of surgeries performed by da Vinci systems increased by almost 2,000% from 2009 to 2017.
-## 
- ##
- ## 
- ##  
-自 2009 年到 2017 年間，達文西手術系統在臺灣執行的手術量成長了將近 2,000%。
-## 
- ##
- ## 
- ##  
+although ## 雖然 
+robotic ## [形]機器人的
+system ## 系統 
+gain ## 獲得、取得
+approval ## [名]批准、許可 
+scope ## [名]範圍、視野 [動]觀察、審視
+laparoscopic ##[形]腹腔鏡的 
+surgery ## [名] 外科手術
+Although it wasn't the first robotic surgical system to gain FDA approval, it was the first to do laparoscopic surgery. ## 雖然它不是第一個獲得美國食品藥物管理局核可的機器人手術系統，卻是第一個執行腹腔鏡手術的機器人系統。
+perform ## 執行
+increase ## 增加
+almost ## 幾乎
+In Taiwan, the number of surgeries performed by da Vinci systems increased by almost 2,000% from 2009 to 2017. ## 自 2009 年到 2017 年間，達文西手術系統在臺灣執行的手術量成長了將近 2,000%。
+surgical ## [形] 手術的
+benefit ## 好處、益處
+patient ## 病人
+tradition ## 傳統
+traditional ## 傳統的
+method ## 方法
 The da Vinci Surgical System offers a number of benefits to patients over traditional surgery methods.
  ## 和傳統的手術方法相比，達文西手術系統可以為患者帶來一些好處。
-## 
- ##
- ## 
- ##  
+reduce ## 減少
+chance ## 機會
+accident ## 意外
+accidental ## 意外的
+harm ## 傷害
+cover ## 蓋子、覆蓋
+recover ## 恢復、復原
 It reduces the chances of accidental harm, and reduces recovery times.
  ## 它減少意外傷害的可能性，也縮短術後復原時間。
-## 
- ##
- ## 
- ##  
-Some doctors also claim that it reduces patient blood loss, despite some studies suggesting that this is not the case.
- ## 有些醫生也聲稱這項系統可以減少患者的出血量，然而部分研究顯示並非如此。
-## 
- ##
- ## 
- ##  
-There are also benefits for doctors who use the system.
- ## 對於使用這項手術系統的醫生而言，也有一些好處。
-## 
- ##
- ## 
- ##  
-Da Vinci allows easier entry into patients' bodies,
- ## 達文西手術系統讓進入患者體內變得更為容易，
-## 
- ##
- ## 
- ##  
-and its special cameras allow surgeons to see more than with the naked eye.
- ## 而且它特製的攝影鏡頭能夠讓外科醫生取得比肉眼更廣的視野。
-## 
- ##
- ## 
- ##  
-Its various arms also make performing surgery easier.
- ## 它的許多隻手臂也讓執行手術變得更加簡單。
-## 
- ##
- ## 
- ##  
-Progress in robotic surgery solutions, like da Vinci, will continue to make surgery safer for everyone.
- ## 像達文西這類的機器人手術系統的進步，將會持續帶給人們更安全的手術。
+claim ## 宣告、聲稱
+reduce ## 減少
+patient ## 病人
+blood ## 血液
+loss ## 損失
+despite ## 雖然
+suggest ## 建議
+case ## 盒子、箱子、案件
+this is not the case ## 並不是這樣 
+Some doctors also claim that it reduces patient blood loss, despite some studies suggesting that this is not the case. ## 有些醫生也聲稱這項系統可以減少患者的出血量，然而部分研究顯示並非如此。
+benefit ## 好處、益處
+There are also benefits for doctors who use the system. ## 對於使用這項手術系統的醫生而言，也有一些好處。
+allow ## 允許
+easy, easier ## 容易的、更容易的
+entry ## 進入口
+patient ## 病人 
+Da Vinci allows easier entry into patients' bodies, ## 達文西手術系統讓進入患者體內變得更為容易，
+camera ## 相機 
+surgeon ## [名] 外科醫生
+nake ## 裸體的
+naked eye ## 裸視 
+and its special cameras allow surgeons to see more than with the naked eye. ## 而且它特製的攝影鏡頭能夠讓外科醫生取得比肉眼更廣的視野。
+various ## 多種的、多樣的
+perform ## 執行
+surgery ## [名] 外科手術
+Its various arms also make performing surgery easier. ## 它的許多隻手臂也讓執行手術變得更加簡單。
+progress ## 進步
+robotic ## [形]機器人的
+surgery ## [名] 外科手術
+solution ### [名] 解決方案 
+continue ##  繼續
+safe, safer ## 安全的、更安全的
+Progress in robotic surgery solutions, like da Vinci, will continue to make surgery safer for everyone. ## 像達文西這類的機器人手術系統的進步，將會持續帶給人們更安全的手術。
 -----*/}.toString().slice("function(){/*--這一行請勿更改--".length+2+(typeof(CR_LF_First_Pos)!='undefined' ? CR_LF_First_Pos:0),-9);
