@@ -1,0 +1,4 @@
+var URIformatVars = function(){/*--這一行請勿更改--
+&line=4;ruthless,not thinking or worrying about any pain caused to others、cruel;Exorcis,to force an evil spirit to leave a person or place by using prayers or magic;scoff,to laugh and talk about a person or idea in a way that shows that you think they are stupid or silly;peculiar,unusual and strange, sometimes in an unpleasant way 17：44;clack,a short sharp noise made by two hard objects being hit together;distinguish,to notice or understand the difference between two things, or to make one person or thing seem different from another;distinct,clearly noticeable、that certainly exists;indistinct,not clear;you are not seeing straight,你沒有看清楚;junk,things that are considered to be of no use or value, or of low quality&
+-----*/}.toString().slice("function(){/*--這一行請勿更改--".length+2,-9);
+ 
