@@ -65,6 +65,45 @@ seperator = '##';
 //左欄為聲音檔路徑
 //右欄為中文
 questionLines = function(){/*--這一行請勿更改--
-ocean##洋(指陸地以外的大範圍海域，如大西洋、太平洋)
-
+dragon##龍
+boat##船
+race##賽跑，速度競賽
+dragon boat race##划龍舟賽
+rice##米
+dumpling##水餃
+rice dumpling##粽子
+festival##節日
+Dragon Boat Festival##龍舟節，端午節
+carnations##康乃馨
+Mother's Day##母親節
+BBQ party##烤肉派對
+watch the moon##賞月
+cake##蛋糕
+moon cake##月餅
+Jade Rabbit##玉兔
+pomelo##柚子
+Moon Festival##月亮節，中秋節
+hunt##打獵
+Easter##復活節
+Easter bunny##復活節兔
+Easter egg hunt##福活節尋找彩蛋
+go egg hunting##去找彩蛋
+trick-or-treat##不給糖就搗蛋
+Halloween##萬聖節前夕
+turkey##火雞
+potatoes##馬鈴薯
+Thanksgiving##感恩節
+fire##火
+cracker##餅乾，炮竹
+firecracker##鞭炮
+Chinese New Year##中國新年，春節
+eve##前夕，前一夜
+New Year's Eve##新年的前夕，除夕
+hot pot##火鍋
+hot dog##熱狗
+family##家庭，家人
+reindeer##麋鹿
+church##教堂
+Santa Claus##聖誕老人
+Christmas##聖誕節
 -----*/}.toString().slice("function(){/*--這一行請勿更改--".length+2+(typeof(CR_LF_First_Pos)!='undefined' ? CR_LF_First_Pos:0),-9);
