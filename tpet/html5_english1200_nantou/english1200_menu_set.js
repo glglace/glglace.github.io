@@ -19,6 +19,6 @@ menu_title='English1200';		//選單標題
 //
 menu_items = new Array(
 //------------------------------------下一行開始為選單增加項目
- '節慶 holiday,questions_set_holiday.js'
+ '節慶 holiday,questions_set_holidays.js'
 //------------------------------------選單選項結束,以下請勿修改
 );
