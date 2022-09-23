@@ -22,12 +22,22 @@ seperator = '##';
 //rainy##下雨的
 //snowy##下雪的
 //cloudy##多雲的
+//How's the weather?##測試
+//It's sunny.##測試
+//It's windy.##測試
+//It's snowy.##測試
+//It's cloudy.##測試
+//It's rainy.##測試
 
 questionLines = function(){/*--這一行請勿更改--
-How's the weather?##測試
-It's sunny.##測試
-It's windy.##測試
-It's snowy.##測試
-It's cloudy.##測試
-It's rainy.##測試
+dog##小狗
+cat##貓
+cow##牛
+mouse##老鼠
+chicken##雞
+monkey##猴子
+tiger##老虎
+goat##羊
+horse##馬
+hippo##河馬
 -----*/}.toString().replace(/\r/g,"").slice("function(){/*--這一行請勿更改--".length+1,-9);
