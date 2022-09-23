@@ -17,6 +17,12 @@ seperator = '##';
 //    第二欄為中文
 //    第三欄為圖片檔的路徑
 //
+//sunny##晴朗的
+//windy##有風的
+//rainy##下雨的
+//snowy##下雪的
+//cloudy##多雲的
+
 questionLines = function(){/*--這一行請勿更改--
 How's the weather?##
 It's sunny.##
@@ -24,9 +30,4 @@ It's windy.##
 It's snowy.##
 It's cloudy.##
 It's rainy.##
-//sunny##晴朗的
-//windy##有風的
-//rainy##下雨的
-//snowy##下雪的
-//cloudy##多雲的
 -----*/}.toString().replace(/\r/g,"").slice("function(){/*--這一行請勿更改--".length+1,-9);
