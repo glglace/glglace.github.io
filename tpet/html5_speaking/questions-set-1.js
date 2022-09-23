@@ -24,10 +24,10 @@ seperator = '##';
 //cloudy##多雲的
 
 questionLines = function(){/*--這一行請勿更改--
-How's the weather?##
-It's sunny.##
-It's windy.##
-It's snowy.##
-It's cloudy.##
-It's rainy.##
+How's the weather?##測試
+It's sunny.##測試
+It's windy.##測試
+It's snowy.##測試
+It's cloudy.##測試
+It's rainy.##測試
 -----*/}.toString().replace(/\r/g,"").slice("function(){/*--這一行請勿更改--".length+1,-9);
