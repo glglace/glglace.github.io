@@ -23,6 +23,6 @@ menu_items = new Array(
 ,'國中1200單 刷題機,english1200-all-set.js'
 ,'高中4000單 刷題機,questions_set_4000.js'
 ,'大學7000單 刷題機,questions_set_7000.js'
-,'4000~7000單 刷題機,questions_set_4000-7000.js'
+,'4001~7000單 刷題機,questions_set_4000-7000.js'
 //------------------------------------選單選項結束,以下請勿修改
 );
