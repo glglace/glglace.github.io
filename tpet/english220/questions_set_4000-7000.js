@@ -853,7 +853,7 @@ hyphen ## n.連字號
 hypocrisy ## n.虛偽
 hypocrite ## n.偽君子 *hypothesis n.假設
 hysterical ## adj.患歇斯底里症的 G
-gaiety ## n.愉快
+gaiety ## n.歡愉
 galaxy ## n.銀河系
 garlic ## n.大蒜
 gasp ## v.喘息
@@ -1084,7 +1084,7 @@ kindness ## n.親切
 king-size ## adj.特大號的
 kit ## n.所有的裝備
 know-how ## n.技能
-knowledgeable ## adj.博識的 L
+knowledgeable ## adj.博識的
 lab ## n.實驗室
 lad ## n.少年
 lama ## n.喇嘛
@@ -1224,7 +1224,7 @@ morale ## n.士氣
 mortal ## adj.必死的
 mortar ## n.灰泥
 motherhood ## n.母性
-motif ## n.主旨
+motif ## n.（文藝作品的）主題，中心思想；（服裝設計等的）基本圖案，基調
 motivation ## n.動機
 motto ## n.箴言;座右銘
 mourn ## v.悲悼
