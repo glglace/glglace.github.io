@@ -1,5 +1,5 @@
 
-caption ='4000~7000單刷題機';
+caption ='4001~7000單刷題機';
 
 //每題有幾個選項
 numberOfOptions = 4;
