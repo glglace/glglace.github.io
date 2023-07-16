@@ -8,7 +8,7 @@ numberOfOptions = 4;
 numberOfOptionsPerRow = 1;	
 
 //每回合抽幾題題目
-numberOfQuestionsPerRound = 50;
+numberOfQuestionsPerRound = 10;
 
 //出題時選擇題目的方式 true:亂數選題  false:按題庫順序
 select_questions_in_random = true; 
