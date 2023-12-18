@@ -21,7 +21,7 @@ menu_items = new Array(
 //------------------------------------下一行開始為選單增加項目
  '國小 220單 刷題機,questions_set_220.js'
 ,'國中1200單 刷題機,english1200-all-set.js'
-,'國中其他常用 800字, questions_set_other_800.js
+,'國中其他常用 800字, questions_set_other_800.js'
 ,'高中4000單 刷題機,questions_set_4000.js'
 ,'大學7000單 刷題機,questions_set_7000.js'
 ,'4001~7000單 刷題機,questions_set_4000-7000.js'
