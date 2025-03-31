@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+    <!-- 20250331 為康軒113五下數學U5面積單位換算 -->
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <title>面積換算工具</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+    .input-group {
+      margin-bottom: 1.2em;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+    .highlight-red { color: red; font-weight: bold; }
+    .input-red { color: red; }
+    .highlight-blue { color: blue; font-weight: bold; }
+    .input-blue { color: blue; }
+    .highlight-green { color: green; font-weight: bold; }
+    .input-green { color: green; }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .button-group {
+      text-align: center;
+      margin-top: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      margin: 0 0.5em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>面積換算工具</h2>
+
+  <div class="container">
+    <!-- 左欄 -->
+    <div class="column">
+      <div class="input-group">
+        <label for="sqm">平方公尺</label>
+        <input type="text" id="sqm">
+      </div>
+
+      <div class="input-group">
+        <label for="are">公畝</label>
+        <input type="text" id="are">
+      </div>
+
+      <div class="input-group">
+        <label for="hectare">公頃</label>
+        <input type="text" id="hectare">
+      </div>
+
+      <div class="input-group">
+        <label for="sqkm">平方公里</label>
+        <input type="text" id="sqkm">
+      </div>
+    </div>
+
+    <!-- 右欄 -->
+    <div class="column">
+      <div class="input-group">
+        <label for="ping" class="highlight-green">坪</label>
+        <input type="text" id="ping" class="input-green">
+      </div>
+
+      <div class="input-group">
+        <label for="fen" class="highlight-blue">分</label>
+        <input type="text" id="fen" class="input-blue">
+      </div>
+
+      <div class="input-group">
+        <label for="jia" class="highlight-red">甲</label>
+        <input type="text" id="jia" class="input-red">
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button onclick="startConversion()">開始換算</button>
+    <button onclick="clearFields()">清除數字</button>
+  </div>
+
+  <script>
+    function formatNumber(value, decimals) {
+      if (Number.isInteger(value)) {
+        return value.toString();
+      } else {
+        return parseFloat(value.toFixed(decimals)).toString();
+      }
+    }
+
+    function startConversion() {
+      const sqmInput = document.getElementById('sqm');
+      const pingInput = document.getElementById('ping');
+      const areInput = document.getElementById('are');
+      const fenInput = document.getElementById('fen');
+      const jiaInput = document.getElementById('jia');
+      const hectareInput = document.getElementById('hectare');
+      const sqkmInput = document.getElementById('sqkm');
+
+      let sqm = parseFloat(sqmInput.value);
+      if (!isNaN(sqm)) {
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let ping = parseFloat(pingInput.value);
+      if (!isNaN(ping)) {
+        sqm = ping * 3.30579;
+        sqmInput.value = formatNumber(sqm, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let are = parseFloat(areInput.value);
+      if (!isNaN(are)) {
+        sqm = are * 100;
+        sqmInput.value = formatNumber(sqm, 2);
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let fen = parseFloat(fenInput.value);
+      if (!isNaN(fen)) {
+        sqm = fen * 970;
+        sqmInput.value = formatNumber(sqm, 2);
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let jia = parseFloat(jiaInput.value);
+      if (!isNaN(jia)) {
+        sqm = jia * 9700;
+        sqmInput.value = formatNumber(sqm, 2);
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let hectare = parseFloat(hectareInput.value);
+      if (!isNaN(hectare)) {
+        sqm = hectare * 10000;
+        sqmInput.value = formatNumber(sqm, 2);
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let sqkm = parseFloat(sqkmInput.value);
+      if (!isNaN(sqkm)) {
+        sqm = sqkm * 1000000;
+        sqmInput.value = formatNumber(sqm, 2);
+        pingInput.value = formatNumber(sqm / 3.30579, 4);
+        areInput.value = formatNumber(sqm / 100, 4);
+        fenInput.value = formatNumber(sqm / 970, 6);
+        jiaInput.value = formatNumber(sqm / 9700, 6);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        return;
+      }
+    }
+
+    function clearFields() {
+      const ids = ['sqm', 'ping', 'are', 'fen', 'jia', 'hectare', 'sqkm'];
+      ids.forEach(id => document.getElementById(id).value = '');
+    }
+  </script>
+</body>
+</html>
