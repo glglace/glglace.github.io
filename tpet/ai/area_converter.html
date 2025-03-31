@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <title>面積換算工具</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 2em auto;
+      padding: 1em;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .input-group {
+      margin-bottom: 1.5em;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .button-group {
+      text-align: center;
+      margin-top: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      margin: 0 0.5em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>面積換算工具</h2>
+  <h2>(國際標準單位)</h2>
+  <div class="input-group">
+    <label for="sqm">平方公尺</label>
+    <input type="text" id="sqm">
+  </div>
+  <div class="input-group">
+    <label for="are">公畝</label>
+    <input type="text" id="are">
+  </div>
+  <div class="input-group">
+    <label for="hectare">公頃</label>
+    <input type="text" id="hectare">
+  </div>
+  <div class="input-group">
+    <label for="sqkm">平方公里</label>
+    <input type="text" id="sqkm">
+  </div>
+
+  <div class="button-group">
+    <button onclick="startConversion()">開始換算</button>
+    <button onclick="clearFields()">清除數字</button>
+  </div>
+
+  <script>
+    function formatNumber(value, decimals) {
+      if (Number.isInteger(value)) {
+        return value.toString();
+      } else {
+        return parseFloat(value.toFixed(decimals)).toString();
+      }
+    }
+
+    function startConversion() {
+      const sqmInput = document.getElementById('sqm');
+      const areInput = document.getElementById('are');
+      const hectareInput = document.getElementById('hectare');
+      const sqkmInput = document.getElementById('sqkm');
+
+      let sqm = parseFloat(sqmInput.value);
+
+      if (!isNaN(sqm)) {
+        areInput.value = formatNumber(sqm / 100, 4);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let are = parseFloat(areInput.value);
+      if (!isNaN(are)) {
+        sqm = are * 100;
+        sqmInput.value = formatNumber(sqm, 2);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let hectare = parseFloat(hectareInput.value);
+      if (!isNaN(hectare)) {
+        sqm = hectare * 10000;
+        sqmInput.value = formatNumber(sqm, 2);
+        areInput.value = formatNumber(sqm / 100, 4);
+        sqkmInput.value = formatNumber(sqm / 1000000, 8);
+        return;
+      }
+
+      let sqkm = parseFloat(sqkmInput.value);
+      if (!isNaN(sqkm)) {
+        sqm = sqkm * 1000000;
+        sqmInput.value = formatNumber(sqm, 2);
+        areInput.value = formatNumber(sqm / 100, 4);
+        hectareInput.value = formatNumber(sqm / 10000, 6);
+        return;
+      }
+    }
+
+    function clearFields() {
+      document.getElementById('sqm').value = '';
+      document.getElementById('are').value = '';
+      document.getElementById('hectare').value = '';
+      document.getElementById('sqkm').value = '';
+    }
+  </script>
+</body>
+</html>
