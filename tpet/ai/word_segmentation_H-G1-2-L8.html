@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>詞語小火車</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+    
+    :root {
+      --primary: #4a6fa5;
+      --secondary: #ff9e3d;
+      --correct: #6abf69;
+      --error: #ff6b6b;
+      --background: #f0f7ff;
+      --carriage: #fff;
+      --text: #333;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .question {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      position: relative;
+    }
+    
+    .question-number {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: var(--secondary);
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .train-container {
+      position: relative;
+      margin: 3rem 0;
+      min-height: 120px;
+    }
+    
+    .engine {
+      position: absolute;
+      left: -80px;
+      top: 10px;
+      font-size: 3rem;
+      transform: scaleX(-1);
+    }
+    
+    .train {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: auto;
+      padding: 1rem 0;
+      min-height: 120px;
+      width: 100%;
+    }
+    
+    .carriage {
+      min-height: 100px;
+      border: 3px solid var(--primary);
+      border-radius: 10px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: var(--carriage);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .carriage.error {
+      border-color: var(--error);
+      background-color: rgba(255, 107, 107, 0.1);
+    }
+    
+    .carriage.correct {
+      border-color: var(--correct);
+      background-color: rgba(106, 191, 105, 0.1);
+    }
+    
+    .carriage-number {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary);
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .word-bank {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .word {
+      /* 增加字塊大小為1.5倍 */
+      width: 60px;
+      height: 60px;
+      background-color: #e3f2fd;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: move;
+      font-size: 1.8rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+      will-change: transform; /* 優化拖曳性能 */
+      touch-action: none; /* 防止觸控時的瀏覽器默認行為 */
+    }
+    
+    .word:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .word.dragging {
+      opacity: 0.8;
+      transform: scale(1.05);
+      z-index: 1000;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    
+    button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    
+    .check-btn {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 4px 6px rgba(74, 111, 165, 0.3);
+    }
+    
+    .next-btn {
+      background-color: var(--secondary);
+      color: white;
+      box-shadow: 0 4px 6px rgba(255, 158, 61, 0.3);
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    #result {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      min-height: 3rem;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .success {
+      background-color: rgba(106, 191, 105, 0.2);
+      color: #2e7d32;
+    }
+    
+    .error-message {
+      background-color: rgba(255, 107, 107, 0.2);
+      color: #c62828;
+    }
+    
+    .train-tracks {
+      height: 10px;
+      background: repeating-linear-gradient(
+        90deg,
+        #8b4513,
+        #8b4513 20px,
+        transparent 20px,
+        transparent 30px
+      );
+      width: 100%;
+      margin-top: -5px;
+    }
+    
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .engine {
+        left: -60px;
+        font-size: 2.5rem;
+      }
+      
+      .word {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #f00;
+      animation: fall 3s linear forwards;
+      z-index: 1000;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: var(--primary);
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>詞語小火車</h1>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+  </header>
+
+  <div class="question">
+    <div class="question-number" id="question-number">1</div>
+    <p id="question">題目：我今天早上吃三明治</p>
+  </div>
+
+  <div class="word-bank" id="word-bank">
+    <!-- 單字會自動產生 -->
+  </div>
+
+  <div class="train-container">
+    <div class="engine">🚂</div>
+    <div class="train" id="train">
+      <!-- 車廂將根據正確答案動態生成 -->
+    </div>
+    <div class="train-tracks"></div>
+  </div>
+
+  <div class="buttons">
+    <button class="check-btn" onclick="checkAnswer()">出發！</button>
+    <button class="next-btn" onclick="nextQuestion()">下一題</button>
+  </div>
+  
+  <div id="result"></div>
+</div>
+
+<script>
+const questions = [
+  { sentence: "小可看見桌上有一張小卡片", correct: ["小可", "看見", "桌上", "有", "一張", "小", "卡片"] },
+  { sentence: "小可也有寫一張卡片要送給大光", correct: ["小可", "也有", "寫", "一張", "卡片", "要", "送給", "大光"] },
+  { sentence: "今天的畫畫課大光忘了帶彩色筆", correct: ["今天的", "畫畫課", "大光", "忘了", "帶", "彩色筆"] },
+  { sentence: "他們又像以前一樣高高興興一起玩", correct: ["他們", "又", "像", "以前", "一樣", "高高興興", "一起玩"] }
+];
+
+let current = 0;
+let totalCorrect = 0;
+
+const wordBank = document.getElementById('word-bank');
+const train = document.getElementById('train');
+const questionText = document.getElementById('question');
+const resultDiv = document.getElementById('result');
+const progressBar = document.getElementById('progress');
+const questionNumber = document.getElementById('question-number');
+
+function updateProgress() {
+  const percentage = (totalCorrect / questions.length) * 100;
+  progressBar.style.width = `${percentage}%`;
+  questionNumber.textContent = current + 1;
+}
+
+function loadQuestion(index) {
+  wordBank.innerHTML = '';
+  train.innerHTML = '';
+  resultDiv.innerHTML = '';
+  resultDiv.className = '';
+
+  const { sentence, correct } = questions[index];
+  questionText.innerText = `題目：${sentence}`;
+
+  const words = sentence.split("");
+  words.forEach((char, idx) => {
+    const div = document.createElement('div');
+    div.className = 'word';
+    div.draggable = true;
+    div.id = 'word-' + idx;
+    div.innerText = char;
+    
+    // 改進拖曳事件處理
+    div.addEventListener('dragstart', dragStart);
+    div.addEventListener('dragend', dragEnd);
+    
+    // 觸控事件處理
+    div.addEventListener('touchstart', touchStart, {passive: false});
+    div.addEventListener('touchmove', touchMove, {passive: false});
+    div.addEventListener('touchend', touchEnd);
+    
+    wordBank.appendChild(div);
+  });
+
+  correct.forEach((word, idx) => {
+    const carriage = document.createElement('div');
+    carriage.className = 'carriage';
+    // 調整車廂大小以適應更大的字塊
+    carriage.style.width = (word.length * 70 + 20) + 'px';
+    carriage.dataset.expectedWord = word;
+    
+    const numberBadge = document.createElement('div');
+    numberBadge.className = 'carriage-number';
+    numberBadge.textContent = idx + 1;
+    carriage.appendChild(numberBadge);
+    
+    carriage.addEventListener('dragover', allowDrop);
+    carriage.addEventListener('drop', drop);
+    train.appendChild(carriage);
+  });
+
+  updateProgress();
+}
+
+// 改進拖曳事件處理
+function dragStart(e) {
+  e.dataTransfer.setData("text/plain", e.target.id);
+  e.dataTransfer.effectAllowed = "move";
+  
+  // 使用 requestAnimationFrame 提高拖曳流暢度
+  requestAnimationFrame(() => {
+    this.classList.add('dragging');
+  });
+  
+  // 設置拖曳圖像為透明，以便自定義拖曳外觀
+  const dragImage = new Image();
+  dragImage.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+  e.dataTransfer.setDragImage(dragImage, 0, 0);
+}
+
+function dragEnd() {
+  this.classList.remove('dragging');
+}
+
+// 觸控處理改進
+let touchDragging = false;
+let draggedElement = null;
+let initialX, initialY;
+let offsetX, offsetY;
+let lastX, lastY; // 追蹤上一次位置，用於平滑移動
+
+function touchStart(e) {
+  e.preventDefault();
+  const touch = e.touches[0];
+  draggedElement = this;
+  initialX = touch.clientX;
+  initialY = touch.clientY;
+  lastX = initialX;
+  lastY = initialY;
+  
+  const rect = draggedElement.getBoundingClientRect();
+  offsetX = initialX - rect.left;
+  offsetY = initialY - rect.top;
+  
+  draggedElement.style.position = 'fixed';
+  draggedElement.style.zIndex = 1000;
+  draggedElement.classList.add('dragging');
+  touchDragging = true;
+  
+  // 使用 requestAnimationFrame 提高觸控拖曳流暢度
+  requestAnimationFrame(() => {
+    moveAt(touch.clientX, touch.clientY);
+  });
+}
+
+function touchMove(e) {
+  if (!touchDragging) return;
+  e.preventDefault();
+  const touch = e.touches[0];
+  
+  // 使用 requestAnimationFrame 提高觸控拖曳流暢度
+  requestAnimationFrame(() => {
+    // 平滑移動：計算移動的平均值
+    const newX = touch.clientX;
+    const newY = touch.clientY;
+    
+    // 平滑化移動
+    const smoothX = lastX * 0.2 + newX * 0.8;
+    const smoothY = lastY * 0.2 + newY * 0.8;
+    
+    moveAt(smoothX, smoothY);
+    
+    lastX = smoothX;
+    lastY = smoothY;
+  });
+}
+
+function moveAt(clientX, clientY) {
+  if (!draggedElement) return;
+  draggedElement.style.left = (clientX - offsetX) + 'px';
+  draggedElement.style.top = (clientY - offsetY) + 'px';
+}
+
+function touchEnd(e) {
+  if (!touchDragging || !draggedElement) return;
+  touchDragging = false;
+  
+  draggedElement.classList.remove('dragging');
+  
+  const carriages = document.querySelectorAll('.carriage');
+  let dropped = false;
+  
+  carriages.forEach(carriage => {
+    const rect = carriage.getBoundingClientRect();
+    const elementRect = draggedElement.getBoundingClientRect();
+    const elementCenter = {
+      x: elementRect.left + elementRect.width / 2,
+      y: elementRect.top + elementRect.height / 2
+    };
+    
+    if (
+      elementCenter.x >= rect.left && 
+      elementCenter.x <= rect.right && 
+      elementCenter.y >= rect.top && 
+      elementCenter.y <= rect.bottom
+    ) {
+      carriage.appendChild(draggedElement);
+      draggedElement.style.position = '';
+      draggedElement.style.left = '';
+      draggedElement.style.top = '';
+      draggedElement.style.zIndex = '';
+      dropped = true;
+    }
+  });
+  
+  if (!dropped) {
+    wordBank.appendChild(draggedElement);
+    draggedElement.style.position = '';
+    draggedElement.style.left = '';
+    draggedElement.style.top = '';
+    draggedElement.style.zIndex = '';
+  }
+  
+  draggedElement = null;
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const node = document.getElementById(data);
+  
+  if (!node) return;
+  
+  if (ev.target.classList.contains('carriage')) {
+    ev.target.appendChild(node);
+  } else if (ev.target.parentElement && ev.target.parentElement.classList.contains('carriage')) {
+    ev.target.parentElement.appendChild(node);
+  }
+  
+  node.style.position = '';
+  node.style.left = '';
+  node.style.top = '';
+  node.classList.remove('dragging');
+}
+
+function createConfetti() {
+  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+  
+  for (let i = 0; i < 50; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.width = Math.random() * 10 + 5 + 'px';
+    confetti.style.height = Math.random() * 10 + 5 + 'px';
+    confetti.style.opacity = Math.random() + 0.5;
+    confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+    document.body.appendChild(confetti);
+    
+    setTimeout(() => {
+      document.body.removeChild(confetti);
+    }, 5000);
+  }
+}
+
+function checkAnswer() {
+  const carriages = document.querySelectorAll('.carriage');
+  const result = [];
+  let errors = [];
+  
+  carriages.forEach((carriage, idx) => {
+    let word = "";
+    carriage.querySelectorAll('.word').forEach(w => {
+      word += w.innerText;
+    });
+    
+    result.push(word);
+    
+    // Reset carriage styling
+    carriage.classList.remove('error', 'correct');
+    
+    // Check if this carriage is correct
+    if (word !== questions[current].correct[idx]) {
+      errors.push(idx + 1);
+      carriage.classList.add('error');
+    } else {
+      carriage.classList.add('correct');
+    }
+  });
+
+  if (errors.length === 0) {
+    resultDiv.innerText = "成功！小火車出發囉～";
+    resultDiv.className = 'success';
+    totalCorrect++;
+    updateProgress();
+    createConfetti();
+    
+    // Animate the train
+    train.style.transition = 'transform 1.5s ease-in-out';
+    train.style.transform = 'translateX(100%)';
+    
+    setTimeout(() => {
+      nextQuestion();
+      train.style.transition = 'none';
+      train.style.transform = 'translateX(0)';
+      setTimeout(() => {
+        train.style.transition = 'transform 1.5s ease-in-out';
+      }, 50);
+    }, 1500);
+  } else {
+    resultDiv.innerText = `請再試一次喔！錯誤在第 ${errors.join("、")} 號車廂`;
+    resultDiv.className = 'error-message';
+  }
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= questions.length) current = 0;
+  loadQuestion(current);
+}
+
+// 初始化
+loadQuestion(current);
+
+// 添加全局事件監聽器，以處理拖曳元素在視窗外的情況
+document.addEventListener('dragover', function(e) {
+  e.preventDefault(); // 允許拖曳
+}, false);
+
+document.addEventListener('drop', function(e) {
+  e.preventDefault();
+  
+  // 如果拖曳元素被放置在非目標區域，將其返回到字庫
+  const data = e.dataTransfer.getData("text");
+  if (data) {
+    const element = document.getElementById(data);
+    if (element && element.classList.contains('dragging')) {
+      wordBank.appendChild(element);
+      element.classList.remove('dragging');
+    }
+  }
+}, false);
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9366fe0a84e3f23c',t:'MTc0NTY4MDA3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
